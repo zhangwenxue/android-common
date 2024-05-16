@@ -65,7 +65,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "android-common", "1.0.0-alpha1")
+    coordinates("io.github.zhangwenxue", "android-common", "1.0.0-alpha2")
 
     pom {
         name.set("Slf Api")
