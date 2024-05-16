@@ -1,4 +1,4 @@
-package com.wehealth.core.common.battery
+package android.boot.common.battery
 
 import android.content.Intent
 import android.content.IntentFilter

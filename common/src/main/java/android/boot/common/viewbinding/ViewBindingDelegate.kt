@@ -1,4 +1,4 @@
-package com.wehealth.core.common.viewbinding
+package android.boot.common.viewbinding
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

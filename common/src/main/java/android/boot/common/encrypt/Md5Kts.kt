@@ -1,4 +1,4 @@
-package com.wehealth.core.common.encrypt
+package android.boot.common.encrypt
 
 import java.security.MessageDigest
 import java.util.Locale
