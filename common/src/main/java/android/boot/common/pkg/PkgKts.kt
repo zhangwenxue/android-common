@@ -13,8 +13,8 @@ suspend fun sysInstall(apkFilePath: String): Result<String> {
         var reader: BufferedReader? = null
         var result: Result<String>? = null
         try {
-            val runtime = Runtime.getRuntime().exec("su")
             val cmd = "pm install -r $apkFilePath \n"
+            val runtime = Runtime.getRuntime().exec(cmd)
             outputStream = DataOutputStream(runtime.outputStream)
             outputStream.run {
                 write(cmd.toByteArray(Charsets.UTF_8))
