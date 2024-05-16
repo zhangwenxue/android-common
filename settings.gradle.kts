@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-common"
 include(":app")
- 
+include(":common")

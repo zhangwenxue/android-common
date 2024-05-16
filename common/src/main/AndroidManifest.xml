@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <provider
+            android:name=".provider.GlobalCtxProvider"
+            android:authorities="${applicationId}.GlobalContextProvider"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+</manifest>
