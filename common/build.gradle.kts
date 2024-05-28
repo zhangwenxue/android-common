@@ -65,10 +65,10 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "android-common", "1.0.0-alpha2")
+    coordinates("io.github.zhangwenxue", "android-common", "1.0.0-alpha4")
 
     pom {
-        name.set("Slf Api")
+        name.set("Android-common-lib")
         description.set("An Android common library")
         inceptionYear.set("2024")
         url.set("https://github.com/zhangwenxue/android-common/")
