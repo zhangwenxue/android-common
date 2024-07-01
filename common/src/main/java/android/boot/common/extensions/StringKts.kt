@@ -9,7 +9,7 @@ fun ByteArray?.asHexString(
     suffix: String = "]"
 ): String {
     return this?.joinToString(separator = separator, prefix = prefix, postfix = suffix) {
-        String.format(Locale.CHINESE, "%02${if (upperCase) "X" else "x"}", it)
+        String.format(Locale.CHINESE, "0x%02${if (upperCase) "X" else "x"}", it)
     } ?: "null-array"
 }
 

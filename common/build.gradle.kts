@@ -65,7 +65,7 @@ mavenPublishing {
         )
     )
 
-    coordinates("io.github.zhangwenxue", "android-common", "1.0.0-alpha6")
+    coordinates("io.github.zhangwenxue", "android-common", "1.0.1")
 
     pom {
         name.set("Android-common-lib")
