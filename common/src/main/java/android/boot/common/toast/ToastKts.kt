@@ -40,7 +40,3 @@ fun <T> Array<T?>?.toast(
 ) {
     this?.joinToString(separator, prefix = "$prefix[", postfix = "]", transform = transform).toast()
 }
-
-fun a() {
-    "".toast()
-}
