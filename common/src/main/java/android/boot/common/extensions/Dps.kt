@@ -1,7 +1,6 @@
 package android.boot.common.extensions
 
 import android.content.res.Resources
-import android.util.TypedValue
 import androidx.core.util.TypedValueCompat
 
 val resources by lazy { Resources.getSystem() }
@@ -20,7 +19,7 @@ val Float.pxAsMm: Float
 
 // Mm to Px
 val Float.mmAsPx: Float
-    get() = TypedValueCompat.deriveDimension(TypedValue.COMPLEX_UNIT_MM, this, displayMetrics)
+    get() = (this * densityDpi) / 25.4f
 
 val Float.dpAsPx: Float
     get() = TypedValueCompat.dpToPx(this, displayMetrics)
