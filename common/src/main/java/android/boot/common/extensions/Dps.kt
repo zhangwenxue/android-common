@@ -6,7 +6,7 @@ import androidx.core.util.TypedValueCompat
 
 val resources by lazy { Resources.getSystem() }
 val displayMetrics by lazy { resources.displayMetrics }
-val densityDpi by lazy { displayMetrics.density }
+val densityDpi by lazy { displayMetrics.densityDpi }
 
 
 val Int.dp: Int
