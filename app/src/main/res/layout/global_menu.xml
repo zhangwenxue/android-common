@@ -4,8 +4,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_menu"
-    android:gravity="center_vertical"
     android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
     android:orientation="horizontal"
     android:padding="8dp">
 
@@ -36,9 +36,10 @@
         android:background="@mipmap/ic_home" />
 
     <View
-        android:id="@+id/back_btn"
+        android:id="@+id/usb_switch"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginHorizontal="8dp"
-        android:background="@mipmap/ic_back" />
+        android:background="@mipmap/ic_usb"
+        android:visibility="visible" />
 </LinearLayout>
