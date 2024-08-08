@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "android.boot.common"
+    namespace = "android.boot.common.tools"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "android.boot.common"
+        applicationId = "android.boot.common.tools"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(project(":common"))
+    implementation(libs.floatingx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
