@@ -4,42 +4,96 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_menu"
-    android:descendantFocusability="blocksDescendants"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:padding="8dp">
+    android:orientation="horizontal">
 
-    <View
+    <FrameLayout
+        android:id="@+id/drag_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:padding="8dp">
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@mipmap/ic_drag"
+            android:backgroundTint="@android:color/darker_gray" />
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/apps_btn"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginHorizontal="8dp"
-        android:background="@mipmap/ic_apps" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp">
 
-    <View
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@mipmap/ic_apps" />
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/settings_btn"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:background="@mipmap/ic_settings" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp">
 
-    <View
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@mipmap/ic_settings" />
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/dev_btn"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginHorizontal="8dp"
-        android:background="@mipmap/ic_dev_ops" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp">
 
-    <View
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@mipmap/ic_dev_ops" />
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/home_btn"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:background="@mipmap/ic_home" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp">
 
-    <View
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@mipmap/ic_home" />
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/usb_switch"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginHorizontal="8dp"
-        android:background="@mipmap/ic_usb"
-        android:visibility="visible" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/usb_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+    </FrameLayout>
 </LinearLayout>

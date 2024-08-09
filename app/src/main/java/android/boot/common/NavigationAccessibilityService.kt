@@ -113,35 +113,36 @@ class NavigationAccessibilityService : AccessibilityService() {
 
         windowManager?.addView(view, lp)
 
-        view.setOnTouchListener { _, event ->
-            val screenX = event.rawX.toInt()
-            val screenY = event.rawY.toInt()
+        view.findViewById<View>(android.boot.common.tools.R.id.drag_btn)
+            .setOnTouchListener { _, event ->
+                val screenX = event.rawX.toInt()
+                val screenY = event.rawY.toInt()
 
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    lastX = event.rawX.toInt()
-                    lastY = event.rawY.toInt()
-                    true
-                }
-
-                MotionEvent.ACTION_MOVE -> {
-                    windowManager?.run {
-                        lp.x -= screenX - lastX
-                        lp.y += screenY - lastY
-                        updateViewLayout(view, lp)
-                        lastX = screenX
-                        lastY = screenY
+                when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        lastX = event.rawX.toInt()
+                        lastY = event.rawY.toInt()
+                        true
                     }
-                    true
-                }
 
-                MotionEvent.ACTION_UP -> {
-                    false
-                }
+                    MotionEvent.ACTION_MOVE -> {
+                        windowManager?.run {
+                            lp.x -= screenX - lastX
+                            lp.y += screenY - lastY
+                            updateViewLayout(view, lp)
+                            lastX = screenX
+                            lastY = screenY
+                        }
+                        true
+                    }
 
-                else -> false
+                    MotionEvent.ACTION_UP -> {
+                        false
+                    }
+
+                    else -> false
+                }
             }
-        }
     }
 
     override fun onServiceConnected() {
@@ -175,7 +176,7 @@ class NavigationAccessibilityService : AccessibilityService() {
                 it.printStackTrace()
             }.getOrElse { "-1" }.toIntOrNull() ?: -1
             view.post {
-                view.findViewById<View>(android.boot.common.tools.R.id.usb_switch).apply {
+                view.findViewById<View>(android.boot.common.tools.R.id.usb_icon).apply {
                     isVisible = usbMode != -1
                     setBackgroundResource(if (usbMode == 0) android.boot.common.tools.R.mipmap.ic_typec else android.boot.common.tools.R.mipmap.ic_usb)
                 }
