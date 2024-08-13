@@ -1,5 +1,6 @@
 [versions]
 agp = "8.4.0"
+easyfloat = "2.0.4"
 floatingx = "2.2.4"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -15,6 +16,7 @@ threetenabp = "1.2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+easyfloat = { module = "com.github.princekin-f:EasyFloat", version.ref = "easyfloat" }
 floatingx = { module = "io.github.petterpx:floatingx", version.ref = "floatingx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

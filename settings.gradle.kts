@@ -23,6 +23,7 @@ dependencyResolutionManagement {
         maven(url = "https://maven.aliyun.com/repository/google")
         google()
         mavenCentral()
+        maven(url = "https://jitpack.io")
     }
 }
 

@@ -94,6 +94,7 @@ class NavigationAccessibilityService : AccessibilityService() {
     private var lastX = 0
     private var lastY = 0
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun initView() {
 
         val lp = WindowManager.LayoutParams().apply {
